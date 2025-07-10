@@ -81,7 +81,7 @@ function App() {
           formData.append('file', blob, 'frame.jpg');
           
           // Send to backend
-          const result = await axios.post('http://localhost:8000/analyze/frame', formData, {
+          const result = await axios.post('https://posturebackend.onrender.com/analyze/frame', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
@@ -133,7 +133,7 @@ function App() {
       const formData = new FormData();
       formData.append('file', selectedVideoFile);
 
-      const result = await axios.post('http://localhost:8000/analyze/video', formData, {
+      const result = await axios.post('https://posturebackend.onrender.com/analyze/video', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
