@@ -44,7 +44,7 @@ function App() {
           formData.append('file', blob, 'frame.jpg');
           
           // Send to backend
-          const result = await axios.post('http://localhost:8000/analyze/frame', formData, {
+          const result = await axios.post('https://posturebackend.onrender.com/analyze/frame', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
